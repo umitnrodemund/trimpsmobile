@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Trimps 5.9.2</title>
 	<meta name="description" content="Trimps">
 	<meta name="author" content="Greensatellite">
@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/style.css?38" />
+	<link rel="stylesheet" href="css/responsive.css">
 </head>
 <!-- 		Trimps
 		Copyright (C) 2023 Zach Hood
@@ -29,7 +30,7 @@
 		author's website, you can find a copy at
 		<trimps.github.io/license.txt>). If not, see
 		<http://www.gnu.org/licenses/>. -->
-<body onblur="gameUnfocused()">
+<body onblur="gameUnfocused()" responsiveView="battle" responsiveShowTopResource="true">
 	<noscript>
 	<div id="checkJavascript" style="position: absolute; height: 100%; width: 100%; font-size: 2vw; padding: 10%; color: white; background-color: black; z-index: 1000000;">
 		For some reason, your browser is having trouble loading this game. This game runs on javascript, and if you have an addon such as noscript, you may need to tell it to allow scripts from http://trimps.github.io, which is where this game is hosted.<br/><br/>
@@ -1384,6 +1385,16 @@
 			&nbsp;
 		</div>
 	</div>
+	<div id="responsiveMenu">
+		<div class="navbar">
+			<button onclick="responsiveMenuShowBattle();">Battle</button>
+			<button>Resource</button>
+			<button>Services</button>
+			<button>Portfolio</button>
+			<button>Contact</button>
+			<button>More</button>
+		</div>
+	</div>
 	<script type="text/javascript" src="Playfab/PlayFabSDK/PlayFabClientApi.js"></script>
 	<script type="text/javascript" src="lz-string.js"></script>
 	<script type="text/javascript" src="decimal.min.js"></script>
@@ -1392,6 +1403,7 @@
 	<script type="text/javascript" src="playerSpire.js?60"></script>
 	<script type="text/javascript" src="objects.js?60"></script>
 	<script type="text/javascript" src="main.js?60"></script>
+	<script type="text/javascript" src="responsive.js"></script>
 	
 </body>
 

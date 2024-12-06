@@ -1,0 +1,466 @@
+
+@media only screen and (max-width: 1200px) {
+    
+    #responsiveMenu
+    {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 10vh; /* Adjust height as needed */
+        background-color: #333; /* Adjust background color as needed */
+        color: white;
+        text-align: center;
+        line-height: 50px; /* Match the height for vertical centering */
+    }
+
+    #responsiveMenu .navbar{
+        display: flex;
+        justify-content: space-around; /* Evenly space the buttons */
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #333; /* Dark background color */
+        z-index: 1000;
+    }
+
+    #responsiveMenu .navbar button {
+        flex: 1; /* Each button takes equal space */
+        height: 100%;
+        border: none;
+        background-color: #444; /* Slightly lighter than navbar */
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for the buttons */
+    #responsiveMenu .navbar button:hover {
+        background-color: #555; /* Slightly lighter on hover */
+    }
+
+    /* Make the buttons touch-friendly */
+    #responsiveMenu .navbar button:active {
+        background-color: #666; /* Darker on active press */
+    }
+
+
+ /* Hide elements not used */
+#settingsRow
+{
+    display: none;
+}
+#unempHide
+{
+    display: none;
+}
+#empHide
+{
+    display: none;
+}
+#trapArea
+{
+    display: none;
+}
+/* Alter some elements */
+
+.progress > div > span {
+    font-size:2vw;
+}
+.progress-bar {
+    display: flex; 
+    align-items: center; 
+}
+.title{
+    font-size:2.5vw;
+}
+
+
+/* Resources Top Row */
+:root {
+    --resource-bar-width: 25vw;
+    --resource-bar-height: 1.5vh;
+    --resource-row-height: 3.5vh;
+
+    --resource-progress-top: 2vh;
+    --resource-progress-height: 2.5vh;
+    --resource-progress-horizontal-margin: 0.5vw;
+    --resource-progress-width: 24vw; /*--resource-bar-width - 2*--resource-progress-horizontal-margin*/
+}
+.playerGather{
+    border:none;
+}
+/* FOOD */
+#food {
+    display: none;
+}
+#food .ownedArea{
+    display: none;
+}
+body[responsiveShowTopResource="true"] #food {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 0vh;
+    width:var(--resource-bar-width);
+    height:var(--resource-row-height);
+    left:0vw;
+    font-size:2vw;
+}
+body[responsiveShowTopResource="true"] #food .progress {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: var(--resource-progress-top);
+    width:var(--resource-progress-width);
+    height:var(--resource-bar-height);
+    margin-left:var(--resource-progress-horizontal-margin);
+    left:0vw;
+    font-size:2vw;
+}
+body[responsiveShowTopResource="true"] #food .collectRow {
+    display: none;
+}
+body[gather="food"] #food {
+    background-color:green;
+}
+
+
+
+#trimpsTimeToFill {
+    margin-top:inherit;
+}
+
+
+#wood {
+    display: none;
+}
+#wood .ownedArea{
+    display: none;
+}
+body[responsiveShowTopResource="true"] #wood {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 0vh;
+    width:var(--resource-bar-width);
+    height:var(--resource-row-height);
+    left:var(--resource-bar-width);
+    font-size:2vw;
+}
+body[responsiveShowTopResource="true"] #wood .progress {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: var(--resource-progress-top);
+    width:var(--resource-progress-width);
+    height:var(--resource-bar-height);
+    left:var(--resource-bar-width);
+    margin-left:var(--resource-progress-horizontal-margin);
+    font-size:2vw;
+}
+body[gather="wood"] #wood {
+    background-color:green;
+}
+body[responsiveShowTopResource="true"] #wood .collectRow {
+    display: none;
+}
+#metal {
+    display: none;
+}
+#metal .ownedArea{
+    display: none;
+}
+body[responsiveShowTopResource="true"] #metal {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 0vh;
+    width:var(--resource-bar-width);
+    height:var(--resource-row-height);
+    left:calc(var(--resource-bar-width)*2);
+    font-size:2vw;
+}
+body[responsiveShowTopResource="true"] #metal .progress {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: var(--resource-progress-top);
+    width:var(--resource-progress-width);
+    height:var(--resource-bar-height);
+    left:calc(var(--resource-bar-width)*2);
+    margin-left:var(--resource-progress-horizontal-margin);
+    font-size:2vw;
+}
+body[gather="metal"] #metal {
+    background-color:green;
+}
+body[responsiveShowTopResource="true"] #metal .collectRow {
+    display: none;
+}
+
+
+
+
+#science {
+    display: none;
+    padding-top:inherit;
+}
+body[responsiveShowTopResource="true"] #science {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 0vh;
+    width:var(--resource-bar-width);
+    height:var(--resource-row-height);
+    left:calc(var(--resource-bar-width)*3);
+    font-size:2vw;
+}
+body[responsiveShowTopResource="true"] #science .ownedArea {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    font-size: 2vw;
+    /*transform: translateY(-0.25vh);  */
+    top: var(--resource-progress-top);
+    left:calc(var(--resource-bar-width)*3);
+    width:var(--resource-bar-width);
+}
+body[gather="science"] #science {
+    background-color:green;
+}
+body[responsiveShowTopResource="true"] #science .collectRow {
+    display: none;
+}
+
+/* Trimps Area */
+:root {
+    --second-row-top: 4vh;
+    --second-row-progress-top: 6vh;
+}
+#trimpTitle {
+    display: none;
+}
+body[responsiveView="battle"] #trimps {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: var(--second-row-top);
+    width:var(--resource-bar-width);
+    height:var(--resource-row-height);
+    left:0vw;
+    
+}
+
+body[responsiveView="battle"] #trimpTitle {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: var(--second-row-top);
+    width:var(--resource-bar-width);
+    height:var(--resource-bar-height);
+    left:0vw;
+    font-size:2.5vw;
+    
+}
+
+body[responsiveView="battle"] #trimps .progress {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: var(--second-row-progress-top);
+    width:var(--resource-progress-width);
+    height:var(--resource-bar-height);
+    left:0vw;
+    margin-left:var(--resource-progress-horizontal-margin);
+    font-size:2vw;
+}
+body[gather="trimps"] #trimps {
+    background-color:green;
+}
+
+
+#trimps .ownedArea {
+    display: none;
+}
+
+#trimps .progress
+{
+    display: none;
+}
+.resourceRow{
+    position:absolute;
+    top:100vh;
+}
+#resourceColumn{
+    position:fixed;
+    top:100vh;
+}
+#miscColumn{
+    position:fixed;
+    top:100vh;
+}
+#trimpsColumn{
+    position:fixed;
+    top:100vh;
+}
+#logColumn{
+    position:fixed;
+    top:100vh;
+}
+
+/* Misc */
+#fragments {
+    display: none!important;
+}
+#fragmentsPs {
+    display: none!important;
+}
+#gems {
+    display: none!important;
+}
+#gemsPs {
+    display: none!important;
+}
+
+#helium {
+    display: none!important;
+}
+body[responsiveShowTopResource="true"] #miscColumn span {
+    font-size:2.5vw !important;
+}
+body[responsiveShowTopResource="true"] #fragments {
+    display: block!important;
+    visibility:visible;
+    position:fixed;
+    top: var(--second-row-top);
+    width:var(--resource-bar-width);
+    height:var(--resource-bar-height);
+    left:var(--resource-bar-width);
+    font-size:2.5vw;
+}
+body[responsiveShowTopResource="true"] #fragments .ownedArea {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    font-size: 2.5vw;
+    top: var(--second-row-progress-top);
+    left:var(--resource-bar-width);
+    width:var(--resource-bar-width);
+}
+body[responsiveShowTopResource="true"] #gems {
+    display: block!important;
+    visibility:visible;
+    position:fixed;
+    top: var(--second-row-top);
+    width:var(--resource-bar-width);
+    height:var(--resource-bar-height);
+    left:calc(var(--resource-bar-width)*2);
+    font-size:2.5vw;
+}
+body[responsiveShowTopResource="true"] #gems .ownedArea {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    font-size: 2.5vw;
+    top: var(--second-row-progress-top);
+    left:calc(var(--resource-bar-width)*2);
+    width:var(--resource-bar-width);
+}
+body[responsiveShowTopResource="true"] #helium {
+    display: block!important;
+    visibility:visible;
+    position:fixed;
+    top: var(--second-row-top);
+    width:var(--resource-bar-width);
+    height:var(--resource-bar-height);
+    left:calc(var(--resource-bar-width)*3);
+    font-size:2.5vw;
+}
+body[responsiveShowTopResource="true"] #helium .ownedArea {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    font-size: 2.5vw;
+    top: var(--second-row-progress-top);
+    left:calc(var(--resource-bar-width)*3);
+    width:var(--resource-bar-width);
+}
+
+
+/* Battle Container */
+body[responsiveView="battle"] #battleContainer {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 10vh;
+    bottom: 40vh;
+    left:0px;
+    right:0px;
+
+}
+
+/* Log Container */
+#logContainer{
+    display: none;
+}
+body[responsiveView="battle"] #logContainer {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 60vh;
+    bottom: 10vh;
+    left:0px;
+    right:0px;
+}
+/* Resource Container 
+
+body[responsiveView="resources"] #resourceColumn {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 10vh;
+    bottom: 10vh;
+    left:0px;
+    right:0px;
+}*/
+/*#miscColumn { 
+    display: none;
+}
+body[responsiveView="resources"] #miscColumn {
+    display: block;
+    visibility:visible;
+    position:fixed;
+    top: 10vh;
+    bottom: 10vh;
+    left:0px;
+    right:0px;
+}*/
+
+
+
+/* outerBuyContainer */
+#outerBuyContainer {
+    display: none;
+
+    
+}
+/* TODO */
+.col-xs-3:has(#turkimpBuff) {
+    display: none;
+}
+.col-xs-3:has(#fluffyBox) {
+    display: none;
+}
+
+
+}
+@media only screen and (min-width: 1200px) {
+    #responsiveMenu
+    {
+        display:none;
+    }
+     
+}
